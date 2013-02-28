@@ -1,0 +1,5 @@
+debian/dzen2.1
+debian/dzen2-dbar.1
+debian/dzen2-gdbar.1
+debian/dzen2-gcpubar.1
+debian/dzen2-textwidth.1

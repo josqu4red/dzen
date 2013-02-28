@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/makefile.mk
+
+# avoid overriding CFLAGS and friends, dzen's config.mk sets those
+DEB_MAKE_INVOKE = $(MAKE) -C $(DEB_BUILDDIR)
+
+# Store build information
+common-binary-post-install-arch common-binary-post-install-indep::
+	dh_buildinfo
+
+binary-install/dzen2::
+	strip --remove-section=.comment --remove-section=.note \
+		$(DEB_DESTDIR)/usr/bin/dzen2
+
+# -*- makefile -*-

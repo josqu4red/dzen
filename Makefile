@@ -6,7 +6,10 @@ include config.mk
 SRC = draw.c main.c util.c action.c
 OBJ = ${SRC:.c=.o}
 
-all: options dzen2
+all: options dzen2 gadgets-all
+
+gadgets-%:
+	$(MAKE) -C gadgets $(*)
 
 options:
 	@echo dzen2 build options:
@@ -27,7 +30,7 @@ dzen2: ${OBJ}
 	@strip $@
 	@echo "Run ./help for documentation"
 
-clean:
+clean: gadgets-clean
 	@echo cleaning
 	@rm -f dzen2 ${OBJ} dzen2-${VERSION}.tar.gz
 
@@ -43,7 +46,7 @@ dist: clean
 	@gzip dzen2-${VERSION}.tar
 	@rm -rf dzen2-${VERSION}
 
-install: all
+install: all gadgets-install
 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
 	@mkdir -p ${DESTDIR}${PREFIX}/bin
 	@cp -f dzen2 ${DESTDIR}${PREFIX}/bin

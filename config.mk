@@ -33,9 +33,9 @@ INCS = -I. -I/usr/include -I${X11INC}
 #CFLAGS = -Wall -Os ${INCS} -DVERSION=\"${VERSION}\" -DDZEN_XINERAMA
 
 
-## Option 4: With Xinerama and XPM
-#LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 -lXinerama -lXpm
-#CFLAGS = -Wall -Os ${INCS} -DVERSION=\"${VERSION}\" -DDZEN_XINERAMA -DDZEN_XPM
+# Option 4: With Xinerama and XPM
+LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 -lXinerama -lXpm
+CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\" -DDZEN_XINERAMA -DDZEN_XPM
 
 
 ## Option 5: With XFT

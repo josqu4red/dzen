@@ -1,0 +1,6 @@
+dzen2 /usr/bin/
+gadgets/dzen2-dbar /usr/bin/
+gadgets/dzen2-gdbar /usr/bin/
+gadgets/dzen2-gcpubar /usr/bin/
+gadgets/dzen2-textwidth /usr/bin/
+bitmaps /usr/share/dzen2/

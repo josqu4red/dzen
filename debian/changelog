@@ -1,0 +1,48 @@
+dzen2 (0.9.5-1) unstable; urgency=low
+
+  * 0.9.5-svn
+
+ -- jamiez <jamiez@mars.home.lan>  Thu, 28 Feb 2013 20:05:39 +0100
+
+dzen2 (0.8.5-4) unstable; urgency=low
+
+  * Install gadgets README files (closes: #499649),
+  * install bundled bitmaps (closes: #499079),
+  * enable XPM support (closes: #498153).
+
+ -- Petr Rockai <mornfall@debian.org>  Sat, 26 Jun 2010 15:54:06 +0200
+
+dzen2 (0.8.5-3) unstable; urgency=low
+
+  * By a silly mistake, we had installed gadgets into
+    /usr/bin/dzen2-<gadget>/<gadget> instead of /usr/bin/dzen2-<gadget>.
+    This is now fixed. Thanks to Kai Hendry for reporting that.
+
+ -- Petr Rockai <mornfall@debian.org>  Tue, 10 Jun 2008 22:31:05 +0200
+
+dzen2 (0.8.5-2) unstable; urgency=low
+
+  * Fix typos in description (closes: #477981),
+  * include gadgets in the package (closes: #458906), thanks
+    bertagaz@ptitcanardnoir.org for manpages.
+
+ -- Petr Rockai <mornfall@debian.org>  Thu, 05 Jun 2008 11:14:44 +0200
+
+dzen2 (0.8.5-1) unstable; urgency=low
+
+  * New upstream version (closes: #451815).
+
+ -- Petr Rockai <mornfall@debian.org>  Mon, 29 Oct 2007 18:08:06 +0100
+
+dzen2 (0.8.0-1) unstable; urgency=low
+
+  * Initial release, (Closes: #429227)
+  * add a manpage for the dzen2 binary.
+
+ -- Petr Rockai <mornfall@debian.org>  Mon, 29 Oct 2007 13:46:16 +0100
+
+dzen2 (0.8.0-0) UNRELEASED
+
+  * Initial packaging. 
+
+ -- Petr Rockai <mornfall@debian.org>  Mon, 06 Aug 2007 15:48:02 +0200

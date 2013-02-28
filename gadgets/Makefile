@@ -6,7 +6,7 @@ include config.mk
 SRC = dbar.c dbar-main.c gdbar.c gcpubar.c textwidth.c
 OBJ = ${SRC:.c=.o}
 
-all: options dbar gdbar gcpubar textwidth
+all: options dzen2-dbar dzen2-gdbar dzen2-gcpubar dzen2-textwidth
 
 options:
 	@echo dzen2 gadgets build options:
@@ -21,34 +21,34 @@ options:
 
 ${OBJ}: dbar.h config.mk
 
-dbar: ${OBJ}
+dzen2-dbar: ${OBJ}
 	@echo LD $@
 	@${LD} -o $@ dbar-main.o dbar.o ${LDFLAGS}
 	@strip $@
 
-gdbar: ${OBJ}
+dzen2-gdbar: ${OBJ}
 	@echo LD $@
 #	@${LD} -o $@ gdbar.o dbar.o ${LDFLAGS} -L${X11LIB} -lX11
 	@${LD} -o $@ gdbar.o dbar.o ${LDFLAGS}
 	@strip $@
 
-gcpubar: ${OBJ}
+dzen2-gcpubar: ${OBJ}
 	@echo LD $@
 #	@${LD} -o $@ gcpubar.o dbar.o ${LDFLAGS} -L${X11LIB}
 	@${LD} -o $@ gcpubar.o dbar.o ${LDFLAGS}
 	@strip $@
 
-textwidth: ${OBJ}
+dzen2-textwidth: ${OBJ}
 	@echo LD $@
 	@${LD} -o $@ textwidth.o ${LDFLAGS} -L${X11LIB} -lX11
 	@strip $@
 
 clean:
 	@echo cleaning
-	@rm -f ${OBJ} dbar
-	@rm -f ${OBJ} gdbar
-	@rm -f ${OBJ} gcpubar
-	@rm -f ${OBJ} textwidth
+	@rm -f ${OBJ} dzen2-dbar
+	@rm -f ${OBJ} dzen2-gdbar
+	@rm -f ${OBJ} dzen2-gcpubar
+	@rm -f ${OBJ} dzen2-textwidth
 
 install: all
 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
